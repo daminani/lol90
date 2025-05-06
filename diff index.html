@@ -1,0 +1,48 @@
+html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Página Web</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+    .section { display: none; margin-top: 20px; }
+    .active { display: block; }
+    button { margin: 5px; padding: 10px 20px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Bienvenida a mi sitio</h1>
+  <p>Haz clic en los botones para cambiar de sección:</p>
+
+  <button onclick="mostrar('inicio')">Inicio</button>
+  <button onclick="mostrar('acerca')">Acerca de mí</button>
+  <button onclick="mostrar('contacto')">Contacto</button>
+
+  <div id="inicio" class="section active">
+    <h2>Inicio</h2>
+    <p>Esta es la sección de inicio.</p>
+  </div>
+
+  <div id="acerca" class="section">
+    <h2>Acerca de mí</h2>
+    <p>Soy Dari y estoy aprendiendo a crear webs interactivas.</p>
+  </div>
+
+  <div id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>Puedes escribirme a mi correo o seguirme en redes.</p>
+  </div>
+
+  <script>
+    function mostrar(seccion) {
+      document.querySelectorAll('.section').forEach(div => div.classList.remove('active'));
+      document.getElementById(seccion).classList.add('active');
+    }
+  </script>
+</body>
+</html>
+</details>
+nginx
+crear archivo index.html
